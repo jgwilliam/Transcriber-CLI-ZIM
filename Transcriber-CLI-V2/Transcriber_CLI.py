@@ -19,10 +19,11 @@ import json
 
 
 # Global validation settings
+# Set all validation settings to False: for ZIM
 validation_settings = {
-    'scientific_names': True,  # Default: enabled
+    'scientific_names': False,  # Default: enabled
     'duplicate_records': False,  # Default: disabled
-    'duplicate_entries': True,  # Default: enabled (collector, date, collid search)
+    'duplicate_entries': False,  # Default: enabled (collector, date, collid search)
     # Future validation types can be added here
     # 'genus_species': True,
     # 'collection_data': True,
@@ -82,12 +83,13 @@ def configure_validation_settings():
         #     validation_settings['genus_species'] = not validation_settings['genus_species']
         #     status = "enabled" if validation_settings['genus_species'] else "disabled"
         #     print(f"Genus/Species Validation {status}")
+        # set validation settings defaults to False for ZIM
         
         elif choice == 'r' or choice == 'reset':
             validation_settings = {
-                'scientific_names': True,
+                'scientific_names': False,
                 'duplicate_records': False,
-                'duplicate_entries': True,
+                'duplicate_entries': False,
                 # Future defaults:
                 # 'genus_species': True,
                 # 'collection_data': True,
@@ -506,8 +508,8 @@ def resume_run_menu():
             print("Please enter a valid number or 'back'")
 
 def main():
-    tprint("Transcriber-CLI-V2")
-    print("Created by: Riley Herbst")
+    tprint("Transcriber-CLI-ZIM")
+    print("Created by: Riley Herbst, edited by Jeff Gwilliam")
     print(85*"=")
     print("Welcome to the Field Museum transcriber-cli, this is an all-purpose image transcriber.")
     print("(You can type 'back' at any step to return to the previous choice)")
