@@ -3,10 +3,10 @@ from transcribers.FirstShot import First_Shot
 from transcribers.SecondShot import Second_Shot
 from helpers.cost_analysis import cost_tracker
 from helpers.txt_to_csv import convert_json_to_csv
-from helpers.segmentation import process_images_segmentation, get_segmentation_settings
-from Validation.validate_scientific_names import validate_csv_scientific_names
-from Validation.find_duplicate_records import validate_csv_duplicate_records
-from Validation.find_duplicate_entries import validate_csv_entries
+# from helpers.segmentation import process_images_segmentation, get_segmentation_settings
+# from Validation.validate_scientific_names import validate_csv_scientific_names
+# from Validation.find_duplicate_records import validate_csv_duplicate_records
+# from Validation.find_duplicate_entries import validate_csv_entries
 import os
 import re
 import stat
@@ -37,7 +37,7 @@ def configure_validation_settings():
     print("VALIDATION SETTINGS")
     print("="*60)
     print("Configure which fields will be validated at the end of transcription.")
-    print("All validations are enabled by default.")
+    print("All validations are disabled by default.")
     print("Use numbers to toggle settings, 'r' to reset all to default, 'q' to finish.")
     print("-"*60)
     
@@ -512,6 +512,7 @@ def main():
     print("Created by: Riley Herbst, edited by Jeff Gwilliam")
     print(85*"=")
     print("Welcome to the Field Museum transcriber-cli, this is an all-purpose image transcriber.")
+    print("This version is customized for transcribing Zimbabwe archeological site index cards")
     print("(You can type 'back' at any step to return to the previous choice)")
     
     # Create the main output directory

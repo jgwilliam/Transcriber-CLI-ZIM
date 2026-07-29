@@ -3,9 +3,23 @@ boto3
 Pillow
 requests
 art
+botocore           
+certifi            
+charset-normalizer 
+idna               
+jmespath           
+python-dateutil    
+s3transfer         
+setuptools         
+six                
+urllib3          
+
 # Segmentation dependencies
 opencv-python
 openvino
 numpy
 paddleocr
 paddlepaddle
+
+
+  
